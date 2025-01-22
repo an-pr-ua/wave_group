@@ -1,0 +1,1844 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Group Application</title>
+    <style type="text/css">
+        @font-face {
+            font-family: DINRoundProB;
+            src: url(DINRoundPro-Bold.otf);
+        }
+
+        @font-face {
+            font-family: DINRoundProM;
+            src: url(DINRoundPro-Medium.otf);
+        }
+
+        @font-face {
+            font-family: DINRoundProL;
+            src: url(DINRoundPro-Light.otf);
+        }
+
+        body {
+            margin-left: 5vw;
+            margin-right: 7vw;
+            word-wrap: break-word;
+            hyphens: auto;
+        }
+
+        h1 {
+            font-family: DINRoundProB;
+            font-size: 2.2vw;
+            color: rgb(57, 172, 112);
+            margin-top: 0;
+
+        }
+
+        h2 {
+            font-family: DINRoundProB;
+            font-size: 1.97vw;
+            color: rgb(57, 172, 112);
+            margin-top: 0;
+            margin-bottom: 0;
+        }
+
+        p {
+            font-family: DINRoundProL;
+            margin-top: 0;
+            margin-bottom: 0;
+            font-size: 1.525vw;
+            font-weight: 500;
+            color: rgb(88, 89, 91);
+        }
+
+        .bold {
+            font-family: DINRoundProM;
+        }
+
+        #mainImage {
+            width: 32vw;
+            height: 100%;
+        }
+
+        #image {
+            width: 16vw;
+            margin-right: -7vw;
+        }
+
+        .border {
+            border: .2vw solid rgb(57, 172, 112);
+            border-radius: 25px;
+            padding: 3vw;
+            margin-top: 1vw;
+            margin-top: 1.8vw;
+        }
+
+        .string {
+            display: flex;
+            align-items: flex-end;
+            margin-top: 2vw;
+        }
+
+        .flex {
+            flex: 1;
+        }
+
+        .square {
+            border: 1px solid rgb(57, 172, 112);
+            width: 2.2vw;
+            height: 2.2vw;
+            margin-left: 1vw;
+            margin-right: 0.5vw;
+            /* margin-bottom: 2vw; */
+        }
+
+        hr {
+            border-top: 1px solid rgb(57, 172, 112);
+            margin: 2vw 2vw 0 1vw;
+        }
+
+        .last {
+            font-family: DINRoundProL;
+            font-size: 1.2vw;
+            color: rgb(57, 172, 112);
+        }
+
+        .table {
+            border: 1px solid rgb(57, 172, 112);
+            display: grid;
+        }
+
+        .center {
+            text-align: center;
+            display: grid;
+        }
+
+        .center-child {
+            margin-top: auto;
+            margin-bottom: auto;
+        }
+
+        .table1p4 {
+            grid-template-columns: 5vw 1fr 5vw 1fr 5vw 1fr 5vw 1fr;
+            grid-template-rows: 5vw;
+            border: 1px solid rgb(57, 172, 112);
+            display: grid;
+            margin-top: 1vw;
+            margin-bottom: 1vw;
+        }
+
+        .table2p4 {
+            grid-template-columns: 5vw 1fr 5vw 1fr;
+            grid-template-rows: 5vw;
+            border: 1px solid rgb(57, 172, 112);
+            display: grid;
+            margin-top: 1vw;
+            margin-bottom: 1vw;
+        }
+
+        .table3p4 {
+            grid-template-columns: 5vw 1fr 5vw 1fr 5vw 1fr;
+            grid-template-rows: 2.5vw 2.5vw 2.5vw 2.5vw;
+            border: 1px solid rgb(57, 172, 112);
+            display: grid;
+            margin-top: 1vw;
+            margin-bottom: 1vw;
+        }
+
+        .table4p4 {
+            grid-template-columns: 5vw 1fr 5vw 1fr 5vw 1fr;
+            grid-template-rows: 2.5vw 2.5vw 2.5vw 2.5vw 2.5vw 2.5vw 2.5vw;
+            border: 1px solid rgb(57, 172, 112);
+            display: grid;
+            margin-top: 1vw;
+            margin-bottom: 1vw;
+        }
+
+        .table1part1-2 {
+            grid-template-columns: 52vw 1fr 1fr 1fr;
+            grid-template-rows: auto 3.5vw 3.5vw 3.5vw;
+            border: 1px solid rgb(57, 172, 112);
+            display: grid;
+            margin-top: 1vw;
+            margin-bottom: 1vw;
+        }
+
+        .table2part1-2 {
+            grid-template-columns: 1fr 4fr 1fr 4fr 1fr 5fr;
+            grid-template-rows: 2.5vw 2.5vw 2.5vw 2.5vw;
+            border: 1px solid rgb(57, 172, 112);
+            display: grid;
+            margin-top: 1vw;
+            margin-bottom: 4vw;
+        }
+
+        .part {
+            font-size: 5vw;
+            margin-top: 2vw;
+            margin-bottom: 0vw;
+            text-align: center;
+        }
+
+        .mb2 {
+            margin-bottom: 2vw;
+        }
+
+        .ml2 {
+            margin-left: 2vw;
+        }
+
+        .mt1 {
+            margin-top: 1vw;
+        }
+
+        .mt2 {
+            margin-top: 2vw;
+        }
+
+        .mt4 {
+            margin-top: 4vw;
+        }
+
+        .mr27 {
+            margin-right: 27vw;
+        }
+
+        .pl {
+            padding-left: 1vw;
+        }
+
+        .s0 {
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .t05 {
+            top: .5vw;
+        }
+
+        .sLast {
+            justify-content: flex-end;
+            align-items: center;
+        }
+
+        .relative-object {
+            position: absolute;
+            /* font-family: Traveling; */
+            font-size: 1.7vw;
+            color: rgb(82, 6, 153);
+        }
+
+        .multiline {
+            left: 2vw;
+            top: -1vw;
+            width: 95%;
+            line-height: 4.15vw;
+        }
+
+        .r {
+            position: relative;
+        }
+    </style>
+</head>
+
+
+
+<body>
+    <div>
+        <div class="page1">
+            <div class="string s0">
+                <img id="mainImage" src="https://wavelength.org.uk/wp-content/uploads/2019/04/fightloneliness.png" />
+                <button onclick="myFunction()">Click here</button>
+                <img id="image" src="wave.png">
+            </div>
+            <h1>Group Grant Application Form</h1>
+            <div class="border" style="margin-top: -1vw;">
+                <h2>Contact details</h2>
+                <div class="string">
+                    <p>Contact name 1</p>
+                    <p id="wavelengthgroupformcontactnameonefield" class="relative-object" style="left: 21vw;">55555</p>
+                    <hr class="flex">
+                </div>
+                <div class="string">
+                    <p>Position</p>
+                    <p id="wavelengthgroupformpositiononefield" class="relative-object" style="left: 16vw;">55555</p>
+                    <hr class="flex">
+                </div>
+                <div class="string">
+                    <p>Contact name 2</p>
+                    <p id="wavelengthgroupformcontactnametwofield" class="relative-object" style="left: 21vw;">55555</p>
+                    <hr class="flex">
+                </div>
+                <div class="string">
+                    <p>Position</p>
+                    <p id="wavelengthgroupformpositiontwofield" class="relative-object" style="left: 16vw;">55555</p>
+                    <hr class="flex">
+                </div>
+                <div class="string">
+                    <p>Group name</p>
+                    <p id="wavelengthgroupformgroupnamefield" class="relative-object" style="left: 19vw;">55555</p>
+                    <hr class="flex">
+                </div>
+                <div class="string">
+                    <p style="padding-right: 2.5vw;">Group type</p>
+                    <div class="square ml2"></div>
+                    <p id="GroupType-NFP" class="relative-object" style="left: 20.5vw;">X</p>
+                    <p>Not for Profit</p>
+                    <div class="square ml2"></div>
+                    <p id="GroupType-PS" class="relative-object" style="left: 34vw;">X</p>
+                    <p>Public Sector</p>
+                    <div class="square ml2"></div>
+                    <p id="GroupType-RC" class="relative-object" style="left: 48vw;">X</p>
+                    <p>Registered Charity</p>
+                    <div class="square ml2"></div>
+                    <p id="GroupType-OC" class="relative-object" style="left: 65.3vw;">X</p>
+                    <p>Other Charitable </p>
+                    <div class="square ml2"></div>
+                    <p id="GroupType-o" class="relative-object" style="left: 81.3vw;">X</p>
+                    <p>Other</p>
+                </div>
+                <div class="string">
+                    <p>If other, please state</p>
+                    <p id="wavelengthgroupformotherbodyfield" class="relative-object" style="left: 24vw;">55555</p>
+                    <hr class="flex">
+                    <p>Charity number</p>
+                    <p id="wavelengthgroupformcharitynumberfield" class="relative-object" style="left: 63vw;">55555</p>
+                    <hr class="flex">
+                </div>
+                <div class="string">
+                    <p>Annual turnover</p>
+                    <p id="wavelengthgroupformannualturnoverfield" class="relative-object" style="left: 21vw;">55555</p>
+                    <hr class="flex">
+                </div>
+                <div class="string r">
+                    <p>Address</p>
+                    <p id="wavelengthgroupformaddressfield" class="relative-object multiline" style="text-indent: 6vw;">
+                        55555</p>
+                    <hr class="flex">
+                </div>
+                <hr class="mt4">
+                <hr class="mt4">
+                <hr class="mt4">
+                <hr class="mt4">
+                <hr class="mt4">
+                <p class="mt4">Address for delivery (Please state address exactly as it is to appear, including full
+                    postcode)</p>
+                <div class="r">
+                    <p id="wavelengthgroupformdeliveryaddressfield" class="relative-object multiline"
+                        style="top: -3vw;">55555</p>
+                    <hr class="mt4">
+                    <hr class="mt4">
+                    <hr class="mt4">
+                    <hr class="mt4">
+                    <hr class="mt4">
+                    <hr class="mt4">
+                    <hr class="mt4">
+                </div>
+                <div class="string">
+                    <p style="padding-right: 2.5vw;">Include group name in address?</p>
+                    <div class="square ml2"></div>
+                    <p id="GroupNameAddress-Yes" class="relative-object" style="left: 34.8vw;">X</p>
+                    <p>Yes</p>
+                    <div class="square ml2"></div>
+                    <p id="GroupNameAddress-No" class="relative-object" style="left: 41.9vw;">X</p>
+                    <p>No</p>
+                </div>
+                <div class="string">
+                    <p>Phone number</p>
+                    <p id="wavelengthgroupformphonenumberfield" class="relative-object" style="left: 21vw;">55555</p>
+                    <hr class="flex">
+                    <p>Mobile number</p>
+                    <p id="wavelengthgroupformmobilenumberfield" class="relative-object" style="left: 62vw;">55555</p>
+                    <hr class="flex">
+                </div>
+                <div class="string mb2">
+                    <p>Email</p>
+                    <p id="wavelengthgroupformemailfield" class="relative-object" style="left: 17vw;">55555</p>
+                    <hr class="flex">
+                </div>
+            </div>
+            <div class="string sLast">
+                <p class="last mr27">Page 1 of 9</p>
+                <p>Form updated 12-2023</p>
+            </div>
+        </div>
+        <div class="page2">
+            <div class="border">
+                <h2>Background to your organisation</h2>
+                <p class="mt1">Please tell us more about your organisation</p>
+                <div class="r">
+                    <p id="wavelengthgroupformorganisationbackground" class="relative-object multiline"
+                        style="top: -3vw;">55555</p>
+                    <hr class="mt4">
+                    <hr class="mt4">
+                    <hr class="mt4">
+                    <hr class="mt4">
+                    <hr class="mt4">
+                    <hr class="mt4">
+                    <hr class="mt4">
+                    <hr class="mt4">
+                    <hr class="mt4">
+                    <hr class="mt4">
+                    <hr class="mt4">
+                    <hr class="mt4">
+                    <hr class="mt4">
+                    <hr class="mt4">
+                    <hr class="mt4">
+                    <hr class="mt4">
+                    <hr class="mt4">
+                    <hr class="mt4">
+                    <hr class="mt4">
+                    <hr class="mt4">
+                    <hr class="mt4">
+                    <hr class="mt4">
+                    <hr class="mt4">
+                    <hr class="mt4">
+                    <hr class="mt4">
+                    <hr class="mt4">
+                    <hr class="mt4 mb2">
+                </div>
+            </div>
+            <div class="string sLast">
+                <p class="last mr27">Page 2 of 9</p>
+                <p>Form updated 12-2023</p>
+            </div>
+        </div>
+        <div class="page3">
+            <div class="border">
+                <h2>Background to your proposed grant application</h2>
+                <p class="mt1">Please tell us how your proposal will fight loneliness and how the grant will assist.
+                    Please note we
+                    do not provide equipment for educational purposes or to help organisations offer their services
+                    online</p>
+                <div class="r">
+                    <p id="wavelengthgroupformgrantbackground" class="relative-object multiline" style="top: -3vw;">
+                        55555</p>
+                    <hr class="mt4">
+                    <hr class="mt4">
+                    <hr class="mt4">
+                    <hr class="mt4">
+                    <hr class="mt4">
+                    <hr class="mt4">
+                    <hr class="mt4">
+                    <hr class="mt4">
+                    <hr class="mt4">
+                    <hr class="mt4">
+                    <hr class="mt4">
+                    <hr class="mt4">
+                    <hr class="mt4">
+                    <hr class="mt4">
+                    <hr class="mt4">
+                    <hr class="mt4">
+                    <hr class="mt4">
+                    <hr class="mt4">
+                    <hr class="mt4">
+                    <hr class="mt4">
+                    <hr class="mt4">
+                    <hr class="mt4">
+                    <hr class="mt4">
+                    <hr class="mt4">
+                    <hr class="mt4">
+                    <hr class="mt4">
+                    <hr class="mt4 mb2">
+                </div>
+            </div>
+            <div class="string sLast">
+                <p class="last mr27"> Page 3 of 9</p>
+                <p>Form updated 12-2023</p>
+            </div>
+        </div>
+        <div class="page4">
+            <div class="border">
+                <h2>Background to proposed grant using TVs/radios/tablets</h2>
+                <p class="bold mt1">Equipment and quantity requested</p>
+                <p class="mb2">Please fill in the number of the items requested. Please remember a current TV license is
+                    necessary
+                    when watching live TV and BBC iPlayer.</p>
+                <div class="table1p4">
+                    <div class="table"></div>
+                    <p id="EquipmentRequestRadio" class="relative-object" style="left: 10vw;padding-top: 1.5vw;">X</p>
+                    <div class="table center">
+                        <p class="center-child">Radios</p>
+                    </div>
+                    <div class="table"></div>
+                    <p id="EquipmentRequestSmallTV" class="relative-object" style="left: 30.5vw;padding-top: 1.5vw;">X
+                    </p>
+                    <div class="table center">
+                        <p class="center-child">Small TVs</p>
+                    </div>
+                    <div class="table"></div>
+                    <p id="EquipmentRequestCommunalTV" class="relative-object" style="left: 51vw;padding-top: 1.5vw;">X
+                    </p>
+                    <div class="table center">
+                        <p class="center-child">Communal TVs</p>
+                    </div>
+                    <div class="table"></div>
+                    <p id="EquipmentRequestTablets" class="relative-object" style="left: 71.5vw;padding-top: 1.5vw;">X
+                    </p>
+                    <div class="table center">
+                        <p class="center-child">Tablets</p>
+                    </div>
+                </div>
+                <p class="bold">Number of people benefitting from the scheme</p>
+                <div class="table2p4">
+                    <div class="table"></div>
+                    <p id="BenefitPerQuarter" class="relative-object" style="left: 10vw;padding-top: 1.5vw;">X</p>
+                    <div class="table center">
+                        <p class="center-child">per quarter</p>
+                    </div>
+                    <div class="table"></div>
+                    <p id="BenefitPerYear" class="relative-object" style="left: 51vw;padding-top: 1.5vw;">X</p>
+                    <div class="table center">
+                        <p class="center-child">per year</p>
+                    </div>
+                </div>
+                <p class="bold mb2">If you help between:</p>
+                <p class="bold mb2">5-40 beneficiaries per year, please ask 40% of your beneficiaries to each fill in
+                    the
+                    Impact Measurement Form
+                    Part 1</p>
+                <p class="bold mb2">41-60 beneficiaries per year, please ask 30% of your beneficiaries to each fill in
+                    the
+                    Impact Measurement Form
+                    Part 1</p>
+                <p class="bold mb2">61-100 beneficiaries per year, please ask 10% of your beneficiaries to each fill in
+                    the
+                    Impact Measurement Form
+                    Part </p>
+                <p class="mb2">This allows us to measure the impact of the technology on reducing loneliness levels.</p>
+                <p class="bold">Beneficiary disadvantage (Please tick all that apply to the people you help.)</p>
+                <div class="table3p4 mt2">
+                    <div class="table">
+                        <p id="Homelessness" class="relative-object" style="left: 10vw;padding-top: 0.2vw;">X</p>
+                    </div>
+                    <div class="table center">
+                        <p class="center-child">Homeless</p>
+                    </div>
+                    <div class="table">
+                        <p id="Previouslyhomeeless" class="relative-object" style="left: 37.5vw;padding-top: 0.2vw;">X
+                        </p>
+                    </div>
+                    <div class="table center">
+                        <p class="center-child">Previously homeless</p>
+                    </div>
+                    <div class="table">
+                        <p id="Domesticabuse" class="relative-object" style="left: 64.5vw;padding-top: 0.2vw;">X</p>
+                    </div>
+                    <div class="table center">
+                        <p class="center-child">Domestic abuse</p>
+                    </div>
+                    <div class="table">
+                        <p id="Victimsoftorture" class="relative-object" style="left: 10vw;padding-top: 0.2vw;">X</p>
+                    </div>
+                    <div class="table center">
+                        <p class="center-child">Victims of torture</p>
+                    </div>
+                    <div class="table">
+                        <p id="PhysicalImpairment" class="relative-object" style="left: 37.5vw;padding-top: 0.2vw;">X
+                        </p>
+                    </div>
+                    <div class="table center">
+                        <p class="center-child">Physical impairment</p>
+                    </div>
+                    <div class="table">
+                        <p id="MentalImpairment" class="relative-object" style="left: 64.5vw;padding-top: 0.2vw;">X</p>
+                    </div>
+                    <div class="table center">
+                        <p class="center-child">Mental impairment</p>
+                    </div>
+                    <div class="table">
+                        <p id="Alzheimers/Dementia" class="relative-object" style="left: 10vw;padding-top: 0.2vw;">X</p>
+                    </div>
+                    <div class="table center">
+                        <p class="center-child">Alzheimers/dementia</p>
+                    </div>
+                    <div class="table">
+                        <p id="Learningdisability" class="relative-object" style="left: 37.5vw;padding-top: 0.2vw;">X
+                        </p>
+                    </div>
+                    <div class="table center">
+                        <p class="center-child">Learning disability</p>
+                    </div>
+                    <div class="table">
+                        <p id="Agerelatedvulnerabilites(55+)" class="relative-object"
+                            style="left: 64.5vw;padding-top: 0.2vw;">X</p>
+                    </div>
+                    <div class="table center">
+                        <p class="center-child">Age-related vulnerabilities (55+)</p>
+                    </div>
+                    <div class="table">
+                        <p id="Refugee" class="relative-object" style="left: 10vw;padding-top: 0.2vw;">X</p>
+                    </div>
+                    <div class="table center">
+                        <p class="center-child">Refugee</p>
+                    </div>
+                    <div class="table">
+                        <p id="Youngpeople(16-25)" class="relative-object" style="left: 37.5vw;padding-top: 0.2vw;">X
+                        </p>
+                    </div>
+                    <div class="table center">
+                        <p class="center-child">Young people (16-25)</p>
+                    </div>
+                    <div class="table">
+                        <p id="Addiction/substancemisuse" class="relative-object"
+                            style="left: 64.5vw;padding-top: 0.2vw;">X</p>
+                    </div>
+                    <div class="table center">
+                        <p class="center-child">Addiction/substance misuse</p>
+                    </div>
+                </div>
+                <p class="bold mb2" style="margin-top: 10vw;">What are the ages af the people this group aims to help
+                    (Please tick all that apply to
+                    the people you help)</p>
+                <div class="table4p4" style="margin-bottom: 10vw;">
+                    <div class="table">
+                        <p id="Age0-4" class="relative-object" style="left: 10vw;padding-top: 0.2vw;">X</p>
+                    </div>
+                    <div class="table center">
+                        <p class="center-child">0-4</p>
+                    </div>
+                    <div class="table">
+                        <p id="Age5-9" class="relative-object" style="left: 37.5vw;padding-top: 0.2vw;">X</p>
+                    </div>
+                    <div class="table center">
+                        <p class="center-child">5-9</p>
+                    </div>
+                    <div class="table">
+                        <p id="Age10-14" class="relative-object" style="left: 64.5vw;padding-top: 0.2vw;">X</p>
+                    </div>
+                    <div class="table center">
+                        <p class="center-child">10-14</p>
+                    </div>
+                    <div class="table">
+                        <p id="Age15-19" class="relative-object" style="left: 10vw;padding-top: 0.2vw;">X</p>
+                    </div>
+                    <div class="table center">
+                        <p class="center-child">15-19</p>
+                    </div>
+                    <div class="table">
+                        <p id="Age20-24" class="relative-object" style="left: 37.5vw;padding-top: 0.2vw;">X</p>
+                    </div>
+                    <div class="table center">
+                        <p class="center-child">20-24</p>
+                    </div>
+                    <div class="table">
+                        <p id="Age25-29" class="relative-object" style="left: 64.5vw;padding-top: 0.2vw;">X</p>
+                    </div>
+                    <div class="table center">
+                        <p class="center-child">25-29</p>
+                    </div>
+                    <div class="table">
+                        <p id="Age30-34" class="relative-object" style="left: 10vw;padding-top: 0.2vw;">X</p>
+                    </div>
+                    <div class="table center">
+                        <p class="center-child">30-34</p>
+                    </div>
+                    <div class="table">
+                        <p id="Age35-39" class="relative-object" style="left: 37.5vw;padding-top: 0.2vw;">X</p>
+                    </div>
+                    <div class="table center">
+                        <p class="center-child">35-39</p>
+                    </div>
+                    <div class="table">
+                        <p id="Age40-44" class="relative-object" style="left: 64.5vw;padding-top: 0.2vw;">X</p>
+                    </div>
+                    <div class="table center">
+                        <p class="center-child">40-44</p>
+                    </div>
+                    <div class="table">
+                        <p id="Age45-49" class="relative-object" style="left: 10vw;padding-top: 0.2vw;">X</p>
+                    </div>
+                    <div class="table center">
+                        <p class="center-child">45-49</p>
+                    </div>
+                    <div class="table">
+                        <p id="Age50-54" class="relative-object" style="left: 37.5vw;padding-top: 0.2vw;">X</p>
+                    </div>
+                    <div class="table center">
+                        <p class="center-child">50-54</p>
+                    </div>
+                    <div class="table">
+                        <p id="Age55-59" class="relative-object" style="left: 64.5vw;padding-top: 0.2vw;">X</p>
+                    </div>
+                    <div class="table center">
+                        <p class="center-child">55-59</p>
+                    </div>
+                    <div class="table">
+                        <p id="Age60-64" class="relative-object" style="left: 10vw;padding-top: 0.2vw;">X</p>
+                    </div>
+                    <div class="table center">
+                        <p class="center-child">60-64</p>
+                    </div>
+                    <div class="table">
+                        <p id="Age65-69" class="relative-object" style="left: 37.5vw;padding-top: 0.2vw;">X</p>
+                    </div>
+                    <div class="table center">
+                        <p class="center-child">65-69</p>
+                    </div>
+                    <div class="table">
+                        <p id="Age70-74" class="relative-object" style="left: 64.5vw;padding-top: 0.2vw;">X</p>
+                    </div>
+                    <div class="table center">
+                        <p class="center-child">70-74</p>
+                    </div>
+                    <div class="table">
+                        <p id="Age75-79" class="relative-object" style="left: 10vw;padding-top: 0.2vw;">X</p>
+                    </div>
+                    <div class="table center">
+                        <p class="center-child">75-79</p>
+                    </div>
+                    <div class="table">
+                        <p id="Age80-84" class="relative-object" style="left: 37.5vw;padding-top: 0.2vw;">X</p>
+                    </div>
+                    <div class="table center">
+                        <p class="center-child">80-84</p>
+                    </div>
+                    <div class="table">
+                        <p id="Age85-89" class="relative-object" style="left: 64.5vw;padding-top: 0.2vw;">X</p>
+                    </div>
+                    <div class="table center">
+                        <p class="center-child">85-89</p>
+                    </div>
+                    <div class="table">
+                        <p id="Age90-94" class="relative-object" style="left: 10vw;padding-top: 0.2vw;">X</p>
+                    </div>
+                    <div class="table center">
+                        <p class="center-child">90-94</p>
+                    </div>
+                    <div class="table">
+                        <p id="Age95-99" class="relative-object" style="left: 37.5vw;padding-top: 0.2vw;">X</p>
+                    </div>
+                    <div class="table center">
+                        <p class="center-child">95-99</p>
+                    </div>
+                    <div class="table">
+                        <p id="AgeOver100" class="relative-object" style="left: 64.5vw;padding-top: 0.2vw;">X</p>
+                    </div>
+                    <div class="table center">
+                        <p class="center-child">Over 100</p>
+                    </div>
+                </div>
+            </div>
+            <div class="string sLast">
+                <p class="last mr27"> Page 4 of 9</p>
+                <p>Form updated 12-2023</p>
+            </div>
+        </div>
+        <div class="page5">
+            <div class="border">
+                <p class="bold">Please advise how</p>
+                <p class="mt1">1. the technology will help fight loneliness for the people you support and</p>
+                <p class="mt1">2. how you will assess the impact of the grant</p>
+                <div class="r">
+                    <p id="wavelengthgroupformadvisehowfield" class="relative-object multiline" style="top: -3vw;">55555
+                    </p>
+                    <hr class="mt4">
+                    <hr class="mt4">
+                    <hr class="mt4">
+                    <hr class="mt4">
+                    <hr class="mt4">
+                    <hr class="mt4">
+                    <hr class="mt4">
+                    <hr class="mt4">
+                    <hr class="mt4">
+                    <hr class="mt4">
+                    <hr class="mt4">
+                    <hr class="mt4">
+                    <hr class="mt4">
+                    <hr class="mt4">
+                    <hr class="mt4">
+                    <hr class="mt4">
+                    <hr class="mt4">
+                    <hr class="mt4">
+                    <hr class="mt4">
+                    <hr class="mt4">
+                    <hr class="mt4">
+                    <hr class="mt4">
+                    <hr class="mt4">
+                    <hr class="mt4">
+                    <hr class="mt4">
+                    <hr class="mt4">
+                    <hr class="mt4 mb2">
+                </div>
+            </div>
+            <div class="string sLast">
+                <p class="last mr27">Page 5 of 9</p>
+                <p>Form updated 12-2023</p>
+            </div>
+        </div>
+        <div class="page6">
+            <div class="border">
+                <p class="bold">Please provide details of how the equipment is to be used as a central resource within
+                    the organisation or loaned out to participants as a loan scheme</p>
+                <p class="mt1">WaveLength do not provide stockpiles of equipment to be given away through the group
+                    applications. If
+                    you need equipment for individuals please use the individual application</p>
+                <div class="r">
+                    <p id="wavelengthgroupformcentralresource" class="relative-object multiline" style="top: -3vw;">
+                        55555</p>
+                    <hr class="mt4">
+                    <hr class="mt4">
+                    <hr class="mt4">
+                    <hr class="mt4">
+                    <hr class="mt4">
+                    <hr class="mt4">
+                    <hr class="mt4">
+                    <hr class="mt4">
+                    <hr class="mt4">
+                    <hr class="mt4">
+                    <hr class="mt4">
+                    <hr class="mt4">
+                    <hr class="mt4">
+                    <hr class="mt4">
+                    <hr class="mt4">
+                    <hr class="mt4">
+                    <hr class="mt4">
+                    <hr class="mt4">
+                    <hr class="mt4">
+                    <hr class="mt4">
+                    <hr class="mt4">
+                    <hr class="mt4">
+                    <hr class="mt4">
+                    <hr class="mt4">
+                    <hr class="mt4">
+                    <hr class="mt4">
+                    <hr class="mt4 mb2">
+                </div>
+            </div>
+            <div class="string sLast">
+                <p class="last mr27">Page 6 of 9</p>
+                <p>Form updated 12-2023</p>
+            </div>
+        </div>
+        <div class="page7">
+            <div class="border">
+                <h2>Feedback</h2>
+                <p class="mt1">Please advise how you will work to return part 2 feedback forms from the same individuals
+                    who filled
+                    out the part 1 forms. Part 2 forms must be returned 1 month after the kit is received. If a delay in
+                    starting your scheme may effect your ability to return the forms please state that here</p>
+                <div class="r">
+                    <p id="wavelengthgroupformreturnfeedback" class="relative-object multiline" style="top: -3vw;">55555
+                    </p>
+                    <hr class="mt4">
+                    <hr class="mt4">
+                    <hr class="mt4">
+                    <hr class="mt4">
+                    <hr class="mt4">
+                    <hr class="mt4">
+                    <hr class="mt4">
+                    <hr class="mt4">
+                    <hr class="mt4">
+                    <hr class="mt4">
+                    <hr class="mt4">
+                    <hr class="mt4">
+                    <hr class="mt4">
+                    <hr class="mt4">
+                    <hr class="mt4">
+                    <hr class="mt4">
+                    <hr class="mt4">
+                    <hr class="mt4">
+                    <hr class="mt4">
+                    <hr class="mt4">
+                    <hr class="mt4">
+                    <hr class="mt4">
+                    <hr class="mt4">
+                    <hr class="mt4">
+                    <hr class="mt4">
+                    <hr class="mt4">
+                    <hr class="mt4 mb2">
+                </div>
+            </div>
+            <div class="string sLast">
+                <p class="last mr27">Page 7 of 9</p>
+                <p>Form updated 12-2023</p>
+            </div>
+        </div>
+        <div class="page8">
+            <div class="border">
+                <h2>Agreement</h2>
+                <p class="mt1">To ensure that we can help as many people as possible in the future, WaveLength needs to
+                    show our
+                    funders
+                    that we are really meeting the needs of those we support. To help us do this we will contact you in
+                    a few months
+                    to get some feedback through quotes, photos or films so we can understand the benefits people are
+                    gaining and
+                    give beneficiaries a voice.</p>
+                <p class="mt1">I agree to provide feedback upon equipment provided and its benefits, to help WaveLength
+                    understand
+                    and promote the effectiveness of its work. I agree to take all reasonable steps to look after any
+                    equipment, provide feedback
+                    and co-operate with any third parties WaveLength is working with</p>
+                <p class="mt1">We require that our logo and a link to our website will be posted on their social media,
+                    website, and
+                    other information
+                    as a funder.</p>
+                <p class="bold mt1">Please provide links to your website and all social media accounts</p>
+                <div class="r">
+                    <p id="wavelengthgroupformwebsiteandsocialmedialinks" class="relative-object multiline"
+                        style="top: -3vw;">55555</p>
+                    <hr class="mt4">
+                    <hr class="mt4">
+                    <hr class="mt4">
+                    <hr class="mt4">
+                    <hr class="mt4">
+                    <hr class="mt4 mb2">
+                </div>
+                <p>You will be free to take part in joint press releases and any promotional material should mention
+                    Wavelength. We should receive copies of press releases and have input into them.</p>
+                <p class="mt1">Participants in programs should be informed that the equipment has been provided by
+                    Wavelength.
+                    Opportunities should be available for Wavelength to undertake interviews, film and take photographs
+                    to be able to promote its work and the benefits of its work upon its website, social media,
+                    publications, and fundraising.</p>
+                <p class="mt1">We also would like to invite referrers to events to share your experience and best
+                    practice with
+                    other organisations and individuals who benefited. They will have the option to provide an input as
+                    case studies when WaveLength is approaching MPs and government at a national and local level to
+                    influence policy around preventing loneliness and isolation.</p>
+                <p class="mt1">For the purpose of the General Data Protection Regulation 2018, I agree to the
+                    information given to
+                    WaveLength being kept by them and shared with third parties to allow WaveLength to conduct its work.
+                </p>
+                <p class="bold mt1">Please ensure that this form is signed by a senior member of staff. A senior member
+                    of
+                    staff must be one of the following :-</p>
+                <p class="bold mt2">CEO / Board Director / Company Secretary / Regional head / A Trustee / Chairperson /
+                    Treasurer / Secretary</p>
+                <div class="string">
+                    <p>Title</p>
+                    <p id="wavelengthgroupformsignatorytitle" class="relative-object" style="left: 13vw;">X</p>
+                    <hr class="flex">
+                </div>
+                <div class="string">
+                    <p>First Name</p>
+                    <p id="wavelengthgroupformsignatoryfirstname" class="relative-object" style="left: 18vw;">X</p>
+                    <hr class="flex">
+                </div>
+                <div class="string">
+                    <p>Surname</p>
+                    <p id="wavelengthgroupformsignatorylastname" class="relative-object" style="left: 17vw;">X</p>
+                    <hr class="flex">
+                </div>
+                <div class="string">
+                    <p>Role in Organisation</p>
+                    <p id="wavelengthgroupformsignatoryrole" class="relative-object" style="left: 24vw;">X</p>
+                    <hr class="flex">
+                </div>
+                <div class="string">
+                    <p>Email Address</p>
+                    <p id="wavelengthgroupformsignatoryemailaddress" class="relative-object" style="left: 20vw;">X</p>
+                    <hr class="flex">
+                </div>
+                <div class="string">
+                    <p>Phone Number</p>
+                    <p id="wavelengthgroupformsignatoryphonenumber" class="relative-object" style="left: 21vw;">X</p>
+                    <hr class="flex">
+                </div>
+                <div class="string">
+                    <p>Mobile Number</p>
+                    <p id="wavelengthgroupformsignatorymobilenumber" class="relative-object" style="left: 21vw;">X</p>
+                    <hr class="flex">
+                </div>
+                <div class="string" style="margin-bottom: 10vw;">
+                    <p>Signed</p>
+                    <p id="wavelengthgroupformsignatorysignature" class="relative-object" style="left: 15vw;">X</p>
+                    <hr class="flex">
+                    <p>Date</p>
+                    <p id="wavelengthgroupformsignatorydate" class="relative-object" style="left: 56vw;">X</p>
+                    <hr class="flex">
+                </div>
+            </div>
+            <div class="string sLast">
+                <p class="last mr27">Page 8 of 9</p>
+                <p>Form updated 12-2023</p>
+            </div>
+        </div>
+        <div class="page9">
+            <div class="border">
+                <h2>Checklist</h2>
+                <p class="bold mt1">If you do not provide all of the documentation requested, we cannot process this
+                    application.</p>
+                <div class="string">
+                    <div class="square"></div>
+                    <p>All sections of form completed</p>
+                </div>
+                <div class="string">
+                    <div class="square"></div>
+                    <p>Impact Measurement Part 1 completed by the required number of beneficiaries</p>
+                </div>
+                <div class="string">
+                    <div class="square"></div>
+                    <p>Evidence of turnover / assets for your organisation</p>
+                </div>
+                <div class="string">
+                    <div class="square"></div>
+                    <p>The application has been signed</p>
+                </div>
+            </div>
+            <div class="border">
+                <p>Please return your completed form to: WaveLength Charity, 47-51 Norfolk Street, Cambridge, CB1 2LD
+                </p>
+            </div>
+            <div class="border">
+                <h2>For office use only</h2>
+                <div class="string">
+                    <p class="bold">Date received</p>
+                    <hr class="flex">
+                    <p class="bold">Approved by</p>
+                    <hr class="flex">
+                    <p class="bold">Date approved</p>
+                    <hr class="flex">
+                </div>
+                <div class="string">
+                    <p class="bold">Equipment provided</p>
+                    <hr class="flex">
+                    <p class="bold">Date delivered</p>
+                    <hr class="flex">
+                </div>
+            </div>
+            <div class="string sLast" style="margin-top: 60vw;">
+                <p class="last mr27">Page 9 of 9</p>
+                <p>Form updated 12-2023</p>
+            </div>
+        </div>
+        <div class="part1">
+            <div class="string s0">
+                <img id="mainImage" src="https://wavelength.org.uk/wp-content/uploads/2019/04/fightloneliness.png" />
+                <div>
+                    <h1 class="part">PART 1</h1>
+                    <h1>Group Impact Measurement</h1>
+                </div>
+                <img id="image" src="wave.png">
+            </div>
+            <p>In order to operate the WaveLength charity, understand the impact of our work on individuals, develop and
+                improve WaveLength
+                charitable operations and to inform future decision making, we would like to collect data in relation to
+                your health, as per
+                question 5 below and any further information about your health you provide to us in this form. We need
+                your explicit consent to
+                process such information about you. You have the right to withdraw your consent at any time, except to
+                the extent that action has
+                already been taken based on your consent, and that the withdrawal will not apply to information that has
+                already been processed
+                based on your consent. Providing health data to us is entirely optional. If you do not consent, please
+                do not make an application,
+                complete question 5 or provide any health data to us in this form.</p>
+            <div class="border">
+                <div class="string">
+                    <div class="square r" style="border: 1px solid rgb(237, 26, 59);">
+                        <p id="wavelengthhealthconsent" class="relative-object" style="left: .5vw;"></p>
+                    </div>
+                    <p class="bold" style="color: rgb(237, 26, 59);">By ticking the box I consent to the processing
+                        of
+                        my
+                        health data for
+                        the purposes set out
+                        above.</p>
+                </div>
+                <p class="mt2">We will store and process personal data you have provided as set out in the
+                    WaveLength
+                    Privacy Notice
+                    available at:
+                    https://wavelength.org.uk/contact/privacy-cookies-wavelength-website/</p>
+                <p class="bold mt2">Please only tick the box that is closest to how you feel.</p>
+                <div class="table1part1-2">
+
+                    <div class="table"></div>
+                    <div class="table center">
+                        <p class="bold center-child " style="color: rgb(57, 172, 112);">Hardly ever
+                            or never</p>
+                    </div>
+                    <div class="table center">
+                        <p class="bold center-child" style="color: rgb(57, 172, 112);">Some of
+                            the time</p>
+                    </div>
+                    <div class="table center">
+                        <p class="bold center-child" style="color: rgb(57, 172, 112);">Often</p>
+                    </div>
+
+                    <div class="table" style="padding-left: 0.5vw;">
+                        <p class="bold center-child">1. How often do you feel that you lack companionship?</p>
+                    </div>
+                    <div class="table r">
+                        <p id="Lack_Companionship-Hardlyeverornever" class="relative-object t05" style="left: 4.5vw;">
+                        </p>
+                    </div>
+                    <div class="table r">
+                        <p id="Lack_Companionship-Someofthetime" class="relative-object t05" style="left: 4.5vw;">
+                        </p>
+                    </div>
+                    <div class="table r">
+                        <p id="Lack_Companionship-Often" class="relative-object t05" style="left: 4.5vw;"></p>
+                    </div>
+
+                    <div class="table" style="padding-left: 0.5vw;">
+                        <p class="bold center-child">2. How often do you feel left out?</p>
+                    </div>
+                    <div class="table r">
+                        <p id="Feeling_Left_Out-Hardlyeverornever" class="relative-object t05" style="left: 4.5vw;">
+                        </p>
+                    </div>
+                    <div class="table r">
+                        <p id="Feeling_Left_Out-Someofthetime" class="relative-object t05" style="left: 4.5vw;"></p>
+                    </div>
+                    <div class="table r">
+                        <p id="Feeling_Left_Out-Often" class="relative-object t05" style="left: 4.5vw;"></p>
+                    </div>
+
+                    <div class="table" style="padding-left: 0.5vw;">
+                        <p class="bold center-child">3. How often do you feel isolated from others?
+                        </p>
+                    </div>
+                    <div class="table r">
+                        <p id="Feeling_isolated-Hardlyeverornever" class="relative-object t05" style="left: 4.5vw;">
+                        </p>
+                    </div>
+                    <div class="table r">
+                        <p id="Feeling_isolated-Someofthetime" class="relative-object t05" style="left: 4.5vw;"></p>
+                    </div>
+                    <div class="table r">
+                        <p id="Feeling_isolated-Often" class="relative-object t05" style="left: 4.5vw;"></p>
+                    </div>
+
+                </div>
+                <p class="bold">4. How often do you feel lonely?</p>
+                <div class="string s17">
+                    <div class="square r">
+                        <p id="Feeling_Lonely-Never" class="relative-object" style="left: .5vw;"></p>
+                    </div>
+                    <p style="flex: 1;">Never</p>
+                    <div class="square r">
+                        <p id="Feeling_Lonely-HardlyEver" class="relative-object" style="left: .5vw;"></p>
+                    </div>
+                    <p style="flex: 1;">Hardly ever</p>
+                    <div class="square r">
+                        <p id="Feeling_Lonely-Occasionally" class="relative-object" style="left: .5vw;"></p>
+                    </div>
+                    <p style="flex: 1;">Occasionally</p>
+                    <div class="square r">
+                        <p id="Feeling_Lonely-Someofthetime" class="relative-object" style="left: .5vw;"></p>
+                    </div>
+                    <p style="flex: 1;">Some of the time</p>
+                    <div class="square r">
+                        <p id="Feeling_Lonely-Often/always" class="relative-object" style="left: .5vw;"></p>
+                    </div>
+                    <p style="flex: 1;">Often / always</p>
+                </div>
+                <p class="bold mt2">5. In general, would you say that your health is</p>
+                <div class="string s18">
+                    <div class="square r">
+                        <p id="General_Health-Poor" class="relative-object" style="left: .5vw;"></p>
+                    </div>
+                    <p style="flex: 1;">Poor</p>
+                    <div class="square r">
+                        <p id="General_Health-Fair" class="relative-object" style="left: .5vw;"></p>
+                    </div>
+                    <p style="flex: 1;">Fair</p>
+                    <div class="square r">
+                        <p id="General_Health-Good" class="relative-object" style="left: .5vw;"></p>
+                    </div>
+                    <p style="flex: 1;">Good</p>
+                    <div class="square r">
+                        <p id="General_Health-VeryGood" class="relative-object" style="left: .5vw;"></p>
+                    </div>
+                    <p style="flex: 1;">Very good</p>
+                    <div class="square r">
+                        <p id="General_Health-Excellent" class="relative-object" style="left: .5vw;"></p>
+                    </div>
+                    <p style="flex: 1;">Excellent</p>
+                </div>
+                <p class="bold mt2">Please tick all that apply.</p>
+                <div class="table2part1-2">
+
+                    <div class="table r">
+                        <p id="Current_situation_or_condition-Homeless" class="relative-object" style="left: 2vw;">
+                        </p>
+                    </div>
+                    <div class="table">
+                        <p class="pl">Homeless</p>
+                    </div>
+                    <div class="table r">
+                        <p id="Current_situation_or_condition-Previouslyhomeless" class="relative-object"
+                            style="left: 2vw;"></p>
+                    </div>
+                    <div class="table">
+                        <p class="pl">Previously homeless</p>
+                    </div>
+                    <div class="table r">
+                        <p id="Current_situation_or_condition-Domesticabuse" class="relative-object" style="left: 2vw;">
+                        </p>
+                    </div>
+                    <div class="table">
+                        <p class="pl">Domestic abuse</p>
+                    </div>
+
+                    <div class="table r">
+                        <p id="Current_situation_or_condition-Victimoftorture" class="relative-object"
+                            style="left: 2vw;"></p>
+                    </div>
+                    <div class="table">
+                        <p class="pl">Victim of torture</p>
+                    </div>
+                    <div class="table r">
+                        <p id="Current_situation_or_condition-Physicalimpairment" class="relative-object"
+                            style="left: 2vw;"></p>
+                    </div>
+                    <div class="table">
+                        <p class="pl">Physical impairment</p>
+                    </div>
+                    <div class="table r">
+                        <p id="Current_situation_or_condition-Mentalimpairment" class="relative-object"
+                            style="left: 2vw;"></p>
+                    </div>
+                    <div class="table">
+                        <p class="pl">Mental impairment</p>
+                    </div>
+
+                    <div class="table r">
+                        <p id="Current_situation_or_condition-Alzheimers/Dementia" class="relative-object"
+                            style="left: 2vw;"></p>
+                    </div>
+                    <div class="table">
+                        <p class="pl">Alzheimers/dementia</p>
+                    </div>
+                    <div class="table r">
+                        <p id="Current_situation_or_condition-Learningdisability" class="relative-object"
+                            style="left: 2vw;"></p>
+                    </div>
+                    <div class="table">
+                        <p class="pl">Learning disability</p>
+                    </div>
+                    <div class="table r">
+                        <p id="Current_situation_or_condition-Agerelatedvulnerabilites(55+)" class="relative-object"
+                            style="left: 2vw;"></p>
+                    </div>
+                    <div class="table">
+                        <p class="pl">Age-related vulnerabilities (55+)</p>
+                    </div>
+
+                    <div class="table r">
+                        <p id="Current_situation_or_condition-Refugee" class="relative-object" style="left: 2vw;">
+                        </p>
+                    </div>
+                    <div class="table">
+                        <p class="pl">Refugee</p>
+                    </div>
+                    <div class="table r">
+                        <p id="Current_situation_or_condition-Youngpeople(16-25)" class="relative-object"
+                            style="left: 2vw;"></p>
+                    </div>
+                    <div class="table">
+                        <p class="pl">Young people (16-25)</p>
+                    </div>
+                    <div class="table r">
+                        <p id="Current_situation_or_condition-Addiction/substancemisuse" class="relative-object"
+                            style="left: 2vw;"></p>
+                    </div>
+                    <div class="table">
+                        <p class="pl">Addiction/substance misuse</p>
+                    </div>
+
+                </div>
+                <div class="string">
+                    <p class="bold">Age</p>
+                    <hr class="flex">
+                    <p id="GroupMemberAge" class="relative-object" style="left: 16vw;">X</p>
+                    <p class="bold">Gender</p>
+                    <div class="square ml2"></div>
+                    <p id="Gender-Female" class="relative-object" style="left: 35vw;"></p>
+                    <p>Female</p>
+                    <div class="square"></div>
+                    <p id="Gender-Male" class="relative-object" style="left: 43.8vw;"></p>
+                    <p>Male</p>
+                    <div class="square"></div>
+                    <p id="Gender-Prefernottosay" class="relative-object" style="left: 51vw;"></p>
+                    <p>Prefer not to say </p>
+                    <p class="bold ml2">Postcode</p>
+                    <hr class="flex">
+                    <p id="Postcode" class="relative-object" style="left: 76vw;">X</p>
+                </div>
+                <div class="string">
+                    <p class="bold">Name</p>
+                    <hr class="flex">
+                    <p id="GroupMemberName" class="relative-object" style="left: 16vw;">X</p>
+                </div>
+                <div class="string" style="margin-bottom: 1vw;">
+                    <p class="bold">Signed</p>
+                    <hr class="flex">
+                    <p id="GroupMemberSignature" class="relative-object" style="left: 16vw;">X</p>
+                    <p class="bold">Date</p>
+                    <hr class="flex">
+                    <p id="GroupMemberSignedDate" class="relative-object" style="left: 57vw;">X</p>
+                </div>
+
+            </div>
+            <div class="border">
+                <div class="string" style="margin-top: -0.5vw;">
+                    <p class="bold">Your feedback is extremely important to us. Please tick if you are happy to be
+                        interviewed</p>
+                    <div class="square"></div>
+                    <p id="wavelengthinterviewconsent" class="relative-object" style="left: 70.3vw;"></p>
+                </div>
+                <p class="bold" style="margin-top: 1.8vw;">Please tell us the best details to contact you on.</p>
+                <div class="string s20 mb2" style="margin-top: 3vw;">
+                    <p class="bold">Tel</p>
+                    <hr class="flex">
+                    <p id="wavelengthinterviewphonefield" class="relative-object" style="left: 12vw;"></p>
+                    <p class="bold">Email</p>
+                    <hr style="flex: 2.5;">
+                    <p id="wavelengthinterviewemailfield" class="relative-object" style="left: 40vw;"></p>
+                </div>
+                <p class="bold">Please send this form back to:</p>
+                <div class="string" style="justify-content: space-between;">
+                    <p>WaveLength Charity, 47-51 Norfolk Street, Cambridge, CB1 2LD</p>
+                    <p class="bold">Thank you for your help</p>
+                </div>
+            </div>
+            <div class="string sLast">
+                <p class="last mr27">Page 1 of 1</p>
+                <p>Form updated 12-2023</p>
+            </div>
+        </div>
+        <div class="part2">
+            <div class="string s0">
+                <img id="mainImage" src="https://wavelength.org.uk/wp-content/uploads/2019/04/fightloneliness.png" />
+                <div>
+                    <h1 class="part">PART 2</h1>
+                    <h1>Group Impact Measurement</h1>
+                </div>
+                <img id="image" src="wave.png">
+            </div>
+            <p>In order to operate the WaveLength charity, understand the impact of our work on individuals, develop and
+                improve WaveLength
+                charitable operations and to inform future decision making, we would like to collect data in relation to
+                your health, as per
+                question 5 below and any further information about your health you provide to us in this form. We need
+                your explicit consent to
+                process such information about you. You have the right to withdraw your consent at any time, except to
+                the extent that action has
+                already been taken based on your consent, and that the withdrawal will not apply to information that has
+                already been processed
+                based on your consent. Providing health data to us is entirely optional. If you do not consent, please
+                do not make an application,
+                complete question 5 or provide any health data to us in this form.</p>
+            <div class="border">
+                <div class="string">
+                    <div class="square r" style="border: 1px solid rgb(237, 26, 59);">
+                        <p id="wavelengthhealthconsent" class="relative-object" style="left: .5vw;"></p>
+                    </div>
+                    <p class="bold" style="color: rgb(237, 26, 59);">By ticking the box I consent to the processing
+                        of
+                        my
+                        health data for
+                        the purposes set out
+                        above.</p>
+                </div>
+                <p class="mt2">We will store and process personal data you have provided as set out in the
+                    WaveLength
+                    Privacy Notice
+                    available at:
+                    https://wavelength.org.uk/contact/privacy-cookies-wavelength-website/</p>
+                <p class="bold mt2">Please only tick the box that is closest to how you feel.</p>
+                <div class="table1part1-2">
+
+                    <div class="table"></div>
+                    <div class="table center">
+                        <p class="bold center-child " style="color: rgb(57, 172, 112);">Hardly ever
+                            or never</p>
+                    </div>
+                    <div class="table center">
+                        <p class="bold center-child" style="color: rgb(57, 172, 112);">Some of
+                            the time</p>
+                    </div>
+                    <div class="table center">
+                        <p class="bold center-child" style="color: rgb(57, 172, 112);">Often</p>
+                    </div>
+
+                    <div class="table" style="padding-left: 0.5vw;">
+                        <p class="bold center-child">1. How often do you feel that you lack companionship?</p>
+                    </div>
+                    <div class="table r">
+                        <p id="Lack_Companionship-Hardlyeverornever" class="relative-object t05" style="left: 4.5vw;">
+                        </p>
+                    </div>
+                    <div class="table r">
+                        <p id="Lack_Companionship-Someofthetime" class="relative-object t05" style="left: 4.5vw;">
+                        </p>
+                    </div>
+                    <div class="table r">
+                        <p id="Lack_Companionship-Often" class="relative-object t05" style="left: 4.5vw;"></p>
+                    </div>
+
+                    <div class="table" style="padding-left: 0.5vw;">
+                        <p class="bold center-child">2. How often do you feel left out?</p>
+                    </div>
+                    <div class="table r">
+                        <p id="Feeling_Left_Out-Hardlyeverornever" class="relative-object t05" style="left: 4.5vw;">
+                        </p>
+                    </div>
+                    <div class="table r">
+                        <p id="Feeling_Left_Out-Someofthetime" class="relative-object t05" style="left: 4.5vw;"></p>
+                    </div>
+                    <div class="table r">
+                        <p id="Feeling_Left_Out-Often" class="relative-object t05" style="left: 4.5vw;"></p>
+                    </div>
+
+                    <div class="table" style="padding-left: 0.5vw;">
+                        <p class="bold center-child">3. How often do you feel isolated from others?
+                        </p>
+                    </div>
+                    <div class="table r">
+                        <p id="Feeling_isolated-Hardlyeverornever" class="relative-object t05" style="left: 4.5vw;">
+                        </p>
+                    </div>
+                    <div class="table r">
+                        <p id="Feeling_isolated-Someofthetime" class="relative-object t05" style="left: 4.5vw;"></p>
+                    </div>
+                    <div class="table r">
+                        <p id="Feeling_isolated-Often" class="relative-object t05" style="left: 4.5vw;"></p>
+                    </div>
+
+                </div>
+                <p class="bold">4. How often do you feel lonely?</p>
+                <div class="string s17">
+                    <div class="square r">
+                        <p id="Feeling_Lonely-Never" class="relative-object" style="left: .5vw;"></p>
+                    </div>
+                    <p style="flex: 1;">Never</p>
+                    <div class="square r">
+                        <p id="Feeling_Lonely-HardlyEver" class="relative-object" style="left: .5vw;"></p>
+                    </div>
+                    <p style="flex: 1;">Hardly ever</p>
+                    <div class="square r">
+                        <p id="Feeling_Lonely-Occasionally" class="relative-object" style="left: .5vw;"></p>
+                    </div>
+                    <p style="flex: 1;">Occasionally</p>
+                    <div class="square r">
+                        <p id="Feeling_Lonely-Someofthetime" class="relative-object" style="left: .5vw;"></p>
+                    </div>
+                    <p style="flex: 1;">Some of the time</p>
+                    <div class="square r">
+                        <p id="Feeling_Lonely-Often/always" class="relative-object" style="left: .5vw;"></p>
+                    </div>
+                    <p style="flex: 1;">Often / always</p>
+                </div>
+                <p class="bold mt2">5. In general, would you say that your health is</p>
+                <div class="string s18">
+                    <div class="square r">
+                        <p id="General_Health-Poor" class="relative-object" style="left: .5vw;"></p>
+                    </div>
+                    <p style="flex: 1;">Poor</p>
+                    <div class="square r">
+                        <p id="General_Health-Fair" class="relative-object" style="left: .5vw;"></p>
+                    </div>
+                    <p style="flex: 1;">Fair</p>
+                    <div class="square r">
+                        <p id="General_Health-Good" class="relative-object" style="left: .5vw;"></p>
+                    </div>
+                    <p style="flex: 1;">Good</p>
+                    <div class="square r">
+                        <p id="General_Health-VeryGood" class="relative-object" style="left: .5vw;"></p>
+                    </div>
+                    <p style="flex: 1;">Very good</p>
+                    <div class="square r">
+                        <p id="General_Health-Excellent" class="relative-object" style="left: .5vw;"></p>
+                    </div>
+                    <p style="flex: 1;">Excellent</p>
+                </div>
+                <p class="bold mt2">Please tick all that apply.</p>
+                <div class="table2part1-2">
+
+                    <div class="table r">
+                        <p id="Current_situation_or_condition-Homeless" class="relative-object" style="left: 2vw;">
+                        </p>
+                    </div>
+                    <div class="table">
+                        <p class="pl">Homeless</p>
+                    </div>
+                    <div class="table r">
+                        <p id="Current_situation_or_condition-Previouslyhomeless" class="relative-object"
+                            style="left: 2vw;"></p>
+                    </div>
+                    <div class="table">
+                        <p class="pl">Previously homeless</p>
+                    </div>
+                    <div class="table r">
+                        <p id="Current_situation_or_condition-Domesticabuse" class="relative-object" style="left: 2vw;">
+                        </p>
+                    </div>
+                    <div class="table">
+                        <p class="pl">Domestic abuse</p>
+                    </div>
+
+                    <div class="table r">
+                        <p id="Current_situation_or_condition-Victimoftorture" class="relative-object"
+                            style="left: 2vw;"></p>
+                    </div>
+                    <div class="table">
+                        <p class="pl">Victim of torture</p>
+                    </div>
+                    <div class="table r">
+                        <p id="Current_situation_or_condition-Physicalimpairment" class="relative-object"
+                            style="left: 2vw;"></p>
+                    </div>
+                    <div class="table">
+                        <p class="pl">Physical impairment</p>
+                    </div>
+                    <div class="table r">
+                        <p id="Current_situation_or_condition-Mentalimpairment" class="relative-object"
+                            style="left: 2vw;"></p>
+                    </div>
+                    <div class="table">
+                        <p class="pl">Mental impairment</p>
+                    </div>
+
+                    <div class="table r">
+                        <p id="Current_situation_or_condition-Alzheimers/Dementia" class="relative-object"
+                            style="left: 2vw;"></p>
+                    </div>
+                    <div class="table">
+                        <p class="pl">Alzheimers/dementia</p>
+                    </div>
+                    <div class="table r">
+                        <p id="Current_situation_or_condition-Learningdisability" class="relative-object"
+                            style="left: 2vw;"></p>
+                    </div>
+                    <div class="table">
+                        <p class="pl">Learning disability</p>
+                    </div>
+                    <div class="table r">
+                        <p id="Current_situation_or_condition-Agerelatedvulnerabilites(55+)" class="relative-object"
+                            style="left: 2vw;"></p>
+                    </div>
+                    <div class="table">
+                        <p class="pl">Age-related vulnerabilities (55+)</p>
+                    </div>
+
+                    <div class="table r">
+                        <p id="Current_situation_or_condition-Refugee" class="relative-object" style="left: 2vw;">
+                        </p>
+                    </div>
+                    <div class="table">
+                        <p class="pl">Refugee</p>
+                    </div>
+                    <div class="table r">
+                        <p id="Current_situation_or_condition-Youngpeople(16-25)" class="relative-object"
+                            style="left: 2vw;"></p>
+                    </div>
+                    <div class="table">
+                        <p class="pl">Young people (16-25)</p>
+                    </div>
+                    <div class="table r">
+                        <p id="Current_situation_or_condition-Addiction/substancemisuse" class="relative-object"
+                            style="left: 2vw;"></p>
+                    </div>
+                    <div class="table">
+                        <p class="pl">Addiction/substance misuse</p>
+                    </div>
+
+                </div>
+                <div class="string">
+                    <p class="bold">Age</p>
+                    <hr class="flex">
+                    <p id="GroupMemberAge" class="relative-object" style="left: 16vw;">X</p>
+                    <p class="bold">Gender</p>
+                    <div class="square ml2"></div>
+                    <p id="Gender-Female" class="relative-object" style="left: 35vw;"></p>
+                    <p>Female</p>
+                    <div class="square"></div>
+                    <p id="Gender-Male" class="relative-object" style="left: 43.8vw;"></p>
+                    <p>Male</p>
+                    <div class="square"></div>
+                    <p id="Gender-Prefernottosay" class="relative-object" style="left: 51vw;"></p>
+                    <p>Prefer not to say </p>
+                    <p class="bold ml2">Postcode</p>
+                    <hr class="flex">
+                    <p id="Postcode" class="relative-object" style="left: 76vw;">X</p>
+                </div>
+                <div class="string">
+                    <p class="bold">Name</p>
+                    <hr class="flex">
+                    <p id="GroupMemberName" class="relative-object" style="left: 16vw;">X</p>
+                </div>
+                <div class="string" style="margin-bottom: 1vw;">
+                    <p class="bold">Signed</p>
+                    <hr class="flex">
+                    <p id="GroupMemberSignature" class="relative-object" style="left: 16vw;">X</p>
+                    <p class="bold">Date</p>
+                    <hr class="flex">
+                    <p id="GroupMemberSignedDate" class="relative-object" style="left: 57vw;">X</p>
+                </div>
+
+            </div>
+            <div class="border">
+                <div class="string" style="margin-top: -0.5vw;">
+                    <p class="bold">Your feedback is extremely important to us. Please tick if you are happy to be
+                        interviewed</p>
+                    <div class="square"></div>
+                    <p id="wavelengthinterviewconsent" class="relative-object" style="left: 70.3vw;"></p>
+                </div>
+                <p class="bold" style="margin-top: 1.8vw;">Please tell us the best details to contact you on.</p>
+                <div class="string s20 mb2" style="margin-top: 3vw;">
+                    <p class="bold">Tel</p>
+                    <hr class="flex">
+                    <p id="wavelengthinterviewphonefield" class="relative-object" style="left: 12vw;"></p>
+                    <p class="bold">Email</p>
+                    <hr style="flex: 2.5;">
+                    <p id="wavelengthinterviewemailfield" class="relative-object" style="left: 40vw;"></p>
+                </div>
+                <p class="bold">Please send this form back to:</p>
+                <div class="string" style="justify-content: space-between;">
+                    <p>WaveLength Charity, 47-51 Norfolk Street, Cambridge, CB1 2LD</p>
+                    <p class="bold">Thank you for your help</p>
+                </div>
+            </div>
+            <div class="string sLast">
+                <p class="last mr27">Page 1 of 1</p>
+                <p>Form updated 12-2023</p>
+            </div>
+        </div>
+
+    </div>
+
+    <script>
+        let arrMaxLengthWord = [];
+        let arr = [
+            "wavelengthgroupformcontactnameonefield",
+            "wavelengthgroupformpositiononefield",
+            "wavelengthgroupformcontactnametwofield", "wavelengthgroupformpositiontwofield", "wavelengthgroupformgroupnamefield",
+            "GroupType-NFP", "GroupType-PS", "GroupType-RC",
+            "GroupType-OC", "GroupType-o", "wavelengthgroupformotherbodyfield", "wavelengthgroupformcharitynumberfield",
+            "wavelengthgroupformannualturnoverfield", "wavelengthgroupformaddressfield",
+            "wavelengthgroupformdeliveryaddressfield", "GroupNameAddress-Yes", "GroupNameAddress-No",
+            "wavelengthgroupformphonenumberfield", "wavelengthgroupformmobilenumberfield", "wavelengthgroupformemailfield",
+            "wavelengthgroupformorganisationbackground", "wavelengthgroupformgrantbackground",
+            "EquipmentRequestRadio", "EquipmentRequestSmallTV", "EquipmentRequestCommunalTV", "EquipmentRequestTablets",
+            "BenefitPerQuarter", "BenefitPerYear",
+            "wavelengthgroupformadvisehowfield", "wavelengthgroupformcentralresource",
+            "wavelengthgroupformreturnfeedback", "wavelengthgroupformwebsiteandsocialmedialinks", "wavelengthgroupformsignatorytitle",
+            "wavelengthgroupformsignatoryfirstname", "wavelengthgroupformsignatorylastname", "wavelengthgroupformsignatoryrole",
+            "wavelengthgroupformsignatoryemailaddress", "wavelengthgroupformsignatoryphonenumber",
+            "wavelengthgroupformsignatorymobilenumber", "wavelengthgroupformsignatorysignature", "wavelengthgroupformsignatorydate",
+            "Homelessness", "Previouslyhomeeless", "Domesticabuse", "Victimsoftorture",
+            "PhysicalImpairment", "MentalImpairment", "Alzheimers/Dementia",
+            "Learningdisability", "Agerelatedvulnerabilites(55+)", "Refugee",
+            "Youngpeople(16-25)", "Addiction/substancemisuse",
+            "Age0-4", "Age5-9", "Age10-14", "Age15-19", "Age20-24", "Age25-29",
+            "Age30-34", "Age35-39", "Age40-44", "Age45-49", "Age50-54",
+            "Age55-59", "Age60-64", "Age65-69", "Age70-74", "Age75-79",
+            "Age80-84", "Age85-89", "Age90-94", "Age95-99", "AgeOver100",
+            "wavelengthhealthconsent", "Lack_Companionship-Hardlyeverornever", "Lack_Companionship-Someofthetime",
+            "Lack_Companionship-Often", "Feeling_Left_Out-Hardlyeverornever", "Feeling_Left_Out-Someofthetime",
+            "Feeling_Left_Out-Often", "Feeling_isolated-Hardlyeverornever", "Feeling_isolated-Someofthetime",
+            "Feeling_isolated-Often", "Feeling_Lonely-Never", "Feeling_Lonely-HardlyEver",
+            "Feeling_Lonely-Occasionally", "Feeling_Lonely-Someofthetime", "Feeling_Lonely-Often/always",
+            "General_Health-Poor", "General_Health-Fair", "General_Health-Good",
+            "General_Health-VeryGood", "General_Health-Excellent", "Current_situation_or_condition-Homeless",
+            "Current_situation_or_condition-Previouslyhomeless", "Current_situation_or_condition-Domesticabuse",
+            "Current_situation_or_condition-Victimoftorture", "Current_situation_or_condition-Physicalimpairment",
+            "Current_situation_or_condition-Mentalimpairment", "Current_situation_or_condition-Alzheimers/Dementia",
+            "Current_situation_or_condition-Learningdisability", "Current_situation_or_condition-Agerelatedvulnerabilites(55+)",
+            "Current_situation_or_condition-Refugee",
+            "Current_situation_or_condition-Youngpeople(16-25)", "Current_situation_or_condition-Addiction/substancemisuse",
+            "wavelengthinterviewphonefield", "wavelengthinterviewemailfield",
+
+            "GroupMemberAge", "Gender-Female", "Gender-Male", "Gender-Prefernottosay", "Postcode",
+            "GroupMemberName", "GroupMemberSignature", "GroupMemberSignedDate",
+
+            "wavelengthinterviewconsent", "wavelengthinterviewphonefield", "wavelengthinterviewemailfield"
+
+        ]
+        // arr.forEach((element) => {
+        //     document.getElementById(`${element}`).innerHTML = "8"
+        // });
+        // function myFunction() {
+        //     let maxLengthWord = {};
+        //     arr.forEach((element) => {
+        //         maxLengthWord.value = document.getElementById(`${element}`).innerText.split('').length;
+        //         maxLengthWord.name = element;
+        //         arrMaxLengthWord.push(maxLengthWord);
+
+        //         console.log(maxLengthWord);
+        //     })
+        //     console.log(arrMaxLengthWord);
+        // }
+
+
+
+
+        function myFunction() {
+
+            const arrFinal = [
+                { value: 45, name: 'wavelengthgroupformcontactnameonefield' },
+                { value: 49, name: 'wavelengthgroupformpositiononefield' },
+                { value: 45, name: 'wavelengthgroupformcontactnametwofield' },
+                { value: 49, name: 'wavelengthgroupformpositiontwofield' },
+                { value: 47, name: 'wavelengthgroupformgroupnamefield' },
+                { value: 1, name: 'GroupType-NFP' },
+                { value: 1, name: 'GroupType-PS' },
+                { value: 1, name: 'GroupType-RC' },
+                { value: 1, name: 'GroupType-OC' },
+                { value: 1, name: 'GroupType-o' },
+                { value: 16, name: 'wavelengthgroupformotherbodyfield' },
+                { value: 16, name: 'wavelengthgroupformcharitynumberfield' },
+                { value: 45, name: 'wavelengthgroupformannualturnoverfield' },
+                { value: 308, name: 'wavelengthgroupformaddressfield' },
+                { value: 364, name: 'wavelengthgroupformdeliveryaddressfield' },
+                { value: 1, name: 'GroupNameAddress-Yes' },
+                { value: 1, name: 'GroupNameAddress-No' },
+                { value: 18, name: 'wavelengthgroupformphonenumberfield' },
+                { value: 17, name: 'wavelengthgroupformmobilenumberfield' },
+                { value: 48, name: 'wavelengthgroupformemailfield' },
+                { value: 1404, name: 'wavelengthgroupformorganisationbackground' },
+                { value: 1404, name: 'wavelengthgroupformgrantbackground' },
+                { value: 1, name: 'EquipmentRequestRadio' },
+                { value: 1, name: 'EquipmentRequestSmallTV' },
+                { value: 1, name: 'EquipmentRequestCommunalTV' },
+                { value: 1, name: 'EquipmentRequestTablets' },
+                { value: 1, name: 'BenefitPerQuarter' },
+                { value: 1, name: 'BenefitPerYear' },
+                { value: 1404, name: 'wavelengthgroupformadvisehowfield' },
+                { value: 1404, name: 'wavelengthgroupformcentralresource' },
+                { value: 1404, name: 'wavelengthgroupformreturnfeedback' },
+                { value: 312, name: 'wavelengthgroupformwebsiteandsocialmedialinks' },
+                { value: 50, name: 'wavelengthgroupformsignatorytitle' },
+                { value: 48, name: 'wavelengthgroupformsignatoryfirstname' },
+                { value: 48, name: 'wavelengthgroupformsignatorylastname' },
+                { value: 43, name: 'wavelengthgroupformsignatoryrole' },
+                { value: 46, name: 'wavelengthgroupformsignatoryemailaddress' },
+                { value: 45, name: 'wavelengthgroupformsignatoryphonenumber' },
+                { value: 45, name: 'wavelengthgroupformsignatorymobilenumber' },
+                { value: 22, name: 'wavelengthgroupformsignatorysignature' },
+                { value: 21, name: 'wavelengthgroupformsignatorydate' },
+                { value: 1, name: 'Homelessness' },
+                { value: 1, name: 'Previouslyhomeeless' },
+                { value: 1, name: 'Domesticabuse' },
+                { value: 1, name: 'Victimsoftorture' },
+                { value: 1, name: 'PhysicalImpairment' },
+                { value: 1, name: 'MentalImpairment' },
+                { value: 1, name: 'Alzheimers/Dementia' },
+                { value: 1, name: 'Learningdisability' },
+                { value: 1, name: 'Agerelatedvulnerabilites(55+)' },
+                { value: 1, name: 'Refugee' },
+                { value: 1, name: 'Youngpeople(16-25)' },
+                { value: 1, name: 'Addiction/substancemisuse' },
+                { value: 1, name: 'Age0-4' },
+                { value: 1, name: 'Age5-9' },
+                { value: 1, name: 'Age10-14' },
+                { value: 1, name: 'Age15-19' },
+                { value: 1, name: 'Age20-24' },
+                { value: 1, name: 'Age25-29' },
+                { value: 1, name: 'Age30-34' },
+                { value: 1, name: 'Age35-39' },
+                { value: 1, name: 'Age40-44' },
+                { value: 1, name: 'Age45-49' },
+                { value: 1, name: 'Age50-54' },
+                { value: 1, name: 'Age55-59' },
+                { value: 1, name: 'Age60-64' },
+                { value: 1, name: 'Age65-69' },
+                { value: 1, name: 'Age70-74' },
+                { value: 1, name: 'Age75-79' },
+                { value: 1, name: 'Age80-84' },
+                { value: 1, name: 'Age85-89' },
+                { value: 1, name: 'Age90-94' },
+                { value: 1, name: 'Age95-99' },
+                { value: 1, name: 'AgeOver100' },
+                { value: 1, name: 'wavelengthhealthconsent' },
+                { value: 1, name: 'Lack_Companionship-Hardlyeverornever' },
+                { value: 1, name: 'Lack_Companionship-Someofthetime' },
+                { value: 1, name: 'Lack_Companionship-Often' },
+                { value: 1, name: 'Feeling_Left_Out-Hardlyeverornever' },
+                { value: 1, name: 'Feeling_Left_Out-Someofthetime' },
+                { value: 1, name: 'Feeling_Left_Out-Often' },
+                { value: 1, name: 'Feeling_isolated-Hardlyeverornever' },
+                { value: 1, name: 'Feeling_isolated-Someofthetime' },
+                { value: 1, name: 'Feeling_isolated-Often' },
+                { value: 1, name: 'Feeling_Lonely-Never' },
+                { value: 1, name: 'Feeling_Lonely-HardlyEver' },
+                { value: 1, name: 'Feeling_Lonely-Occasionally' },
+                { value: 1, name: 'Feeling_Lonely-Someofthetime' },
+                { value: 1, name: 'Feeling_Lonely-Often/always' },
+                { value: 1, name: 'General_Health-Poor' },
+                { value: 1, name: 'General_Health-Fair' },
+                { value: 1, name: 'General_Health-Good' },
+                { value: 1, name: 'General_Health-VeryGood' },
+                { value: 1, name: 'General_Health-Excellent' },
+                { value: 1, name: 'Current_situation_or_condition-Homeless' },
+                { value: 1, name: 'Current_situation_or_condition-Previouslyhomeless' },
+                { value: 1, name: 'Current_situation_or_condition-Domesticabuse' },
+                { value: 1, name: 'Current_situation_or_condition-Victimoftorture' },
+                { value: 1, name: 'Current_situation_or_condition-Physicalimpairment' },
+                { value: 1, name: 'Current_situation_or_condition-Mentalimpairment' },
+                { value: 1, name: 'Current_situation_or_condition-Alzheimers/Dementia' },
+                { value: 1, name: 'Current_situation_or_condition-Learningdisability' },
+                { value: 1, name: 'Current_situation_or_condition-Agerelatedvulnerabilites(55+)' },
+                { value: 1, name: 'Current_situation_or_condition-Refugee' },
+                { value: 1, name: 'Current_situation_or_condition-Youngpeople(16-25)' },
+                { value: 1, name: 'Current_situation_or_condition-Addiction/substancemisuse' },
+                { value: 13, name: 'wavelengthinterviewphonefield' },
+                { value: 32, name: 'wavelengthinterviewemailfield' },
+                { value: 6, name: 'GroupMemberAge' },
+                { value: 1, name: 'Gender-Female' },
+                { value: 1, name: 'Gender-Male' },
+                { value: 1, name: 'Gender-Prefernottosay' },
+                { value: 7, name: 'Postcode' },
+                { value: 49, name: 'GroupMemberName' },
+                { value: 21, name: 'GroupMemberSignature' },
+                { value: 21, name: 'GroupMemberSignedDate' },
+                { value: 1, name: 'wavelengthinterviewconsent' },
+                { value: 13, name: 'wavelengthinterviewphonefield' },
+                { value: 32, name: 'wavelengthinterviewemailfield' }
+            ]
+
+            arrFinal.forEach((element) => {
+                // document.getElementById(`${element.name}`).innerHTML = "W".repeat(element.value);
+
+
+                let oneString = "";
+                let oneSymbol = "";
+
+                for (let i = 0; i < element.value; i++) {
+                    let numSliceMax = Math.ceil(Math.random() * 12 + 2);
+                    let numSliceMin = numSliceMax - 1;
+                    oneSymbol = Math.random().toString(36).slice(numSliceMin, numSliceMax);
+                    console.log(oneString);
+
+                    if (element.value == 1) {
+                        oneString = "X";
+                    }
+                    else {
+                        if (numSliceMax == 5) {
+                            oneString = oneString + " ";
+                        }
+                        oneString = oneString + oneSymbol;
+                    };
+                }
+                document.getElementById(`${element.name}`).innerHTML = oneString;
+
+            })
+
+            setTimeout(WWW, 10000);
+            function WWW() {
+                arrFinal.forEach((element) => {
+                    document.getElementById(`${element.name}`).innerHTML = "W".repeat(element.value)
+                }
+                )
+            }
+
+            setTimeout(CW, 15000);
+            function CW() {
+                arrFinal.forEach((element) => {
+                    document.getElementById(`${element.name}`).innerHTML = element.value
+                }
+                )
+            }
+        }
+
+    </script>
+
+</body>
+
+</html>
