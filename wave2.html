@@ -266,6 +266,11 @@
                     <hr class="flex">
                 </div>
                 <div class="string">
+                    <p>Phone number</p>
+                    <p id="wavelengthgroupformphoneonefield" class="relative-object" style="left: 20vw;">55555</p>
+                    <hr class="flex">
+                </div>
+                <div class="string">
                     <p>Contact name 2</p>
                     <p id="wavelengthgroupformcontactnametwofield" class="relative-object" style="left: 21vw;">55555</p>
                     <hr class="flex">
@@ -273,6 +278,11 @@
                 <div class="string">
                     <p>Position</p>
                     <p id="wavelengthgroupformpositiontwofield" class="relative-object" style="left: 16vw;">55555</p>
+                    <hr class="flex">
+                </div>
+                <div class="string">
+                    <p>Phone number</p>
+                    <p id="wavelengthgroupformphonetwofield" class="relative-object" style="left: 20vw;">55555</p>
                     <hr class="flex">
                 </div>
                 <div class="string">
@@ -321,13 +331,11 @@
                 <hr class="mt4">
                 <hr class="mt4">
                 <hr class="mt4">
-                <hr class="mt4">
                 <p class="mt4">Address for delivery (Please state address exactly as it is to appear, including full
                     postcode)</p>
                 <div class="r">
                     <p id="wavelengthgroupformdeliveryaddressfield" class="relative-object multiline"
                         style="top: -3vw;">55555</p>
-                    <hr class="mt4">
                     <hr class="mt4">
                     <hr class="mt4">
                     <hr class="mt4">
@@ -1623,8 +1631,8 @@
         let arrMaxLengthWord = [];
         let arr = [
             "wavelengthgroupformcontactnameonefield",
-            "wavelengthgroupformpositiononefield",
-            "wavelengthgroupformcontactnametwofield", "wavelengthgroupformpositiontwofield", "wavelengthgroupformgroupnamefield",
+            "wavelengthgroupformpositiononefield", "wavelengthgroupformphoneonefield",
+            "wavelengthgroupformcontactnametwofield", "wavelengthgroupformpositiontwofield", "wavelengthgroupformphonetwofield", "wavelengthgroupformgroupnamefield",
             "GroupType-NFP", "GroupType-PS", "GroupType-RC",
             "GroupType-OC", "GroupType-o", "wavelengthgroupformotherbodyfield", "wavelengthgroupformcharitynumberfield",
             "wavelengthgroupformannualturnoverfield", "wavelengthgroupformaddressfield",
@@ -1690,8 +1698,10 @@
             const arrFinal = [
                 { value: 45, name: 'wavelengthgroupformcontactnameonefield' },
                 { value: 49, name: 'wavelengthgroupformpositiononefield' },
+                { value: 44, name: 'wavelengthgroupformphoneonefield' },
                 { value: 45, name: 'wavelengthgroupformcontactnametwofield' },
                 { value: 49, name: 'wavelengthgroupformpositiontwofield' },
+                { value: 44, name: 'wavelengthgroupformphonetwofield' },
                 { value: 47, name: 'wavelengthgroupformgroupnamefield' },
                 { value: 1, name: 'GroupType-NFP' },
                 { value: 1, name: 'GroupType-PS' },
@@ -1701,8 +1711,8 @@
                 { value: 16, name: 'wavelengthgroupformotherbodyfield' },
                 { value: 16, name: 'wavelengthgroupformcharitynumberfield' },
                 { value: 45, name: 'wavelengthgroupformannualturnoverfield' },
-                { value: 308, name: 'wavelengthgroupformaddressfield' },
-                { value: 364, name: 'wavelengthgroupformdeliveryaddressfield' },
+                { value: 256, name: 'wavelengthgroupformaddressfield' },
+                { value: 312, name: 'wavelengthgroupformdeliveryaddressfield' },
                 { value: 1, name: 'GroupNameAddress-Yes' },
                 { value: 1, name: 'GroupNameAddress-No' },
                 { value: 18, name: 'wavelengthgroupformphonenumberfield' },
